@@ -61,7 +61,7 @@ const healthCheck = async (req, res) => {
         healthStatus.topic = 'ERROR';
     }
 
-    // DB check (PostgreSQL or SQLite)
+    // DB check 
     try {
         await sequelize.authenticate();
         healthStatus.database = 'UP';
